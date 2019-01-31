@@ -61,9 +61,6 @@ public class BubbleRelativeLayout extends RelativeLayout {
     }
 
     private void init(final Context context, final AttributeSet attrs) {
-
-        //setGravity(Gravity.CENTER);
-
         ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         setLayoutParams(params);
 
@@ -71,12 +68,12 @@ public class BubbleRelativeLayout extends RelativeLayout {
             TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.bubble);
 
             try {
-                PADDING = a.getDimensionPixelSize(R.styleable.bubble_padding, PADDING);
-                SHADOW_COLOR = a.getInt(R.styleable.bubble_shadowColor, SHADOW_COLOR);
-                LEG_HALF_BASE = a.getDimensionPixelSize(R.styleable.bubble_halfBaseOfLeg, LEG_HALF_BASE);
+                PADDING = a.getDimensionPixelSize(R.styleable.bubble_bubblePadding, PADDING);
+                SHADOW_COLOR = a.getInt(R.styleable.bubble_bubbleShadowColor, SHADOW_COLOR);
+                LEG_HALF_BASE = a.getDimensionPixelSize(R.styleable.bubble_bubbleHalfBaseOfLeg, LEG_HALF_BASE);
                 MIN_LEG_DISTANCE = PADDING + LEG_HALF_BASE;
-                STROKE_WIDTH = a.getFloat(R.styleable.bubble_strokeWidth, STROKE_WIDTH);
-                CORNER_RADIUS = a.getFloat(R.styleable.bubble_cornerRadius, CORNER_RADIUS);
+                STROKE_WIDTH = a.getFloat(R.styleable.bubble_bubbleStrokeWidth, STROKE_WIDTH);
+                CORNER_RADIUS = a.getFloat(R.styleable.bubble_bubbleCornerRadius, CORNER_RADIUS);
             } finally {
                 if (a != null) {
                     a.recycle();
@@ -133,6 +130,7 @@ public class BubbleRelativeLayout extends RelativeLayout {
 
     /**
      * 根据显示方向，获取尖角位置矩阵
+     *
      * @param width
      * @param height
      * @return
