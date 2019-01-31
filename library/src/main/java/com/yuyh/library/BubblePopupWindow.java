@@ -104,6 +104,7 @@ public class BubblePopupWindow extends PopupWindow {
 
     /**
      * 测量高度
+     *
      * @return
      */
     public int getMeasureHeight() {
@@ -114,6 +115,7 @@ public class BubblePopupWindow extends PopupWindow {
 
     /**
      * 测量宽度
+     *
      * @return
      */
     public int getMeasuredWidth() {

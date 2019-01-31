@@ -1,4 +1,27 @@
 # BubblePopupWindow
+
+**NB!** This fork is created to support Android Support Library 28.0.0 and to fix some minor issues
+
+### Download (updated JitPack version)
+
+Step 1. Add the JitPack repository to your build file.
+```
+repositories {
+    // ...
+    maven { url "https://jitpack.io" }
+}
+```
+
+Step 2. Add the dependency.
+```
+dependencies {
+    compile 'com.github.yaroslav-v:BubblePopupWindow:1.0.1'
+}
+```
+
+That's it! The first time you request a project JitPack checks out the code, builds it and serves the build artifacts. 
+
+### The original description
 Android 实现各个方向的气泡弹窗，可控制气泡尖角偏移量。
 
 ### 截图
